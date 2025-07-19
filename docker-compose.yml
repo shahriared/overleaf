@@ -43,6 +43,9 @@ services:
             OVERLEAF_SITE_URL: https://overleaf.shahriared.com
             OVERLEAF_ADMIN_EMAIL: shahriared@gmail.com
 
+            SERVICE_URL_SHARELATEX: ""
+            SERVICE_FQDN_SHARELATEX: ""
+
             ## Set for SSL via nginx-proxy
             #VIRTUAL_HOST: 103.112.212.22
 
