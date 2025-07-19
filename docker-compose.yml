@@ -41,7 +41,7 @@ services:
             EMAIL_CONFIRMATION_DISABLED: 'true'
 
             OVERLEAF_SITE_URL: https://overleaf.shahriared.com
-            OVERLEAF_ADMIN_EMAIL: shahriared.com
+            OVERLEAF_ADMIN_EMAIL: shahriared@gmail.com
 
             ## Set for SSL via nginx-proxy
             #VIRTUAL_HOST: 103.112.212.22
