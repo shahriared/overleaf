@@ -5,7 +5,6 @@ services:
         # Server Pro users:
         # image: quay.io/sharelatex/sharelatex-pro
         image: sharelatex/sharelatex:custom-arm64
-        platform: linux/amd64
         container_name: sharelatex
         depends_on:
             mongo:
