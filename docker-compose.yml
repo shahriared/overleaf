@@ -4,7 +4,7 @@ services:
         restart: always
         # Server Pro users:
         # image: quay.io/sharelatex/sharelatex-pro
-        image: randomlogic01/sharelatex
+        image: sharelatex/sharelatex:custom-arm64
         platform: linux/amd64
         container_name: sharelatex
         depends_on:
