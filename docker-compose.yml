@@ -12,8 +12,8 @@ services:
                 condition: service_healthy
             redis:
                 condition: service_started
-        ports:
-            - 80:80
+        # ports:
+        #     - 80:80
         stop_grace_period: 60s
         volumes:
             - ~/sharelatex_data:/var/lib/overleaf
@@ -40,6 +40,9 @@ services:
 
             # Disables email confirmation requirement
             EMAIL_CONFIRMATION_DISABLED: 'true'
+
+            OVERLEAF_SITE_URL: "https://overleaf.shahriared.com"
+            OVERLEAF_ADMIN_EMAIL: "admin@shahriared.com"
 
             ## Set for SSL via nginx-proxy
             #VIRTUAL_HOST: 103.112.212.22
@@ -142,12 +145,12 @@ services:
     # settings. We recommend using a properly managed nginx instance outside of the Overleaf Server Pro setup,
     # but the example here can be used if you'd prefer to run everything with docker-compose
 
-    nginx-proxy:
-        image: jwilder/nginx-proxy
-        container_name: nginx-proxy
-        ports:
-          - "80:80"
-          - "443:443"
-        volumes:
-          - /var/run/docker.sock:/tmp/docker.sock:ro
-          - /home/overleaf/tmp:/etc/nginx/certs
+    # nginx-proxy:
+    #     image: jwilder/nginx-proxy
+    #     container_name: nginx-proxy
+    #     ports:
+    #       - "80:80"
+    #       - "443:443"
+    #     volumes:
+    #       - /var/run/docker.sock:/tmp/docker.sock:ro
+    #       - /home/overleaf/tmp:/etc/nginx/certs
