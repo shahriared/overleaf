@@ -21,6 +21,9 @@ services:
             ####             socket, required for Sibling Containers to work    ####
             ########################################################################
             # - /var/run/docker.sock:/var/run/docker.sock
+        labels:
+            coolify.environment-variables.SERVICE_URL_SHARELATEX: ""
+            coolify.environment-variables.SERVICE_FQDN_SHARELATEX: ""
         environment:
 
             OVERLEAF_APP_NAME: Overleaf Community Edition
