@@ -16,6 +16,7 @@ services:
         stop_grace_period: 60s
         volumes:
             - ~/sharelatex_data:/var/lib/overleaf
+            - /srv/texlive-2025:/usr/local/texlive/2025
             ########################################################################
             ####  Server Pro: Uncomment the following line to mount the docker  ####
             ####             socket, required for Sibling Containers to work    ####
